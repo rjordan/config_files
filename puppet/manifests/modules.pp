@@ -13,8 +13,14 @@ class core {
     "ntp": require=>Package["ntp"], ensure=>running;
   }
   file {
-    "/etc/sudoers": owner=>root,group=>root,mode=>"0440";
-    "/etc/etckeeper/etckeeper.conf": owner=>root,group=>root,
-      mode=>"0644",require=>Package["sudo"]
+    "/etc/sudoers": 
+	owner=>root,
+	group=>root,
+	mode=>"0440";
+    "/etc/etckeeper/etckeeper.conf": 
+	owner=>root,
+	group=>root,
+      	mode=>"0644",	
+	require=>Package["sudo"]
   }
 }
