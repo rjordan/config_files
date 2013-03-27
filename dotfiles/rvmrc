@@ -1,0 +1,3 @@
+#For Jenkins
+export rvm_install_on_use_flag=1
+export rvm_trust_rvmrcs_flag=1
