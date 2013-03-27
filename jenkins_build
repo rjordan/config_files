@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e #Exit on error
+source ~/.bashrc
+cd . #force it to reload an .rvmrc if available
+bundle install
+rake db:migrate
+rake 
+#warble
