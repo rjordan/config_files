@@ -16,13 +16,15 @@ class core {
   }
   file {
     "/etc/sudoers": 
-	      owner=>root,
-	      group=>root,
-	      mode=>"0440";
+	    owner=>root,
+	    group=>root,
+	    mode=>"0440",
+      	require=>Package["sudo"];
     "/etc/etckeeper/etckeeper.conf": 
-	      owner=>root,
-	      group=>root,
+    	owner=>root,
+    	group=>root,
       	mode=>"0644",	
-  	require=>Package["sudo"]
+        source=>"puppet:///etckeeper.conf",
+      	require=>Package["etckeeper"];
   }
 }
