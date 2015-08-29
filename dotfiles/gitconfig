@@ -1,0 +1,11 @@
+[user]
+	email = rjordan@pobox.com
+	name = Richard Kent Jordan
+[push]
+	default = simple
+[merge]
+	ff = false
+[pull]
+	ff = only
+[core]
+        autocrlf = input
